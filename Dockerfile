@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     git \
     autoconf \
     automake \
+    cmake \
     pkg-config \
     python3 \
     curl \
@@ -24,7 +25,10 @@ RUN apt-get install -y \
     libsdl2-net-dev:arm64 \
     libsdl2-mixer-dev:arm64 \
     libsdl2-image-dev:arm64 \
-    libsamplerate0-dev:arm64
+    libsamplerate0-dev:arm64 \
+    libfluidsynth-dev:arm64 \
+    libglew-dev:arm64 \
+    libopencv-dev:arm64
 
 ENV CC=aarch64-linux-gnu-gcc
 ENV CXX=aarch64-linux-gnu-g++
