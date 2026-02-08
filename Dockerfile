@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
     automake \
     pkg-config \
     python3 \
-    curl
+    curl \
+    zip
 
 RUN dpkg --add-architecture arm64 && \
     sed -i 's/deb http/deb [arch=amd64] http/g' /etc/apt/sources.list && \
