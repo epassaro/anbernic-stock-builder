@@ -20,16 +20,6 @@ RUN dpkg --add-architecture arm64 && \
     echo "deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports jammy-updates main restricted universe multiverse" >> /etc/apt/sources.list && \
     apt-get update
 
-RUN apt-get install -y \
-    libsdl2-dev:arm64 \
-    libsdl2-net-dev:arm64 \
-    libsdl2-mixer-dev:arm64 \
-    libsdl2-image-dev:arm64 \
-    libsamplerate0-dev:arm64 \
-    libfluidsynth-dev:arm64 \
-    libglew-dev:arm64 \
-    libopencv-dev:arm64
-
 ENV CC=aarch64-linux-gnu-gcc
 ENV CXX=aarch64-linux-gnu-g++
 ENV PKG_CONFIG_PATH=/usr/lib/aarch64-linux-gnu/pkgconfig
